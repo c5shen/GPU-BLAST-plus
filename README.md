@@ -3,7 +3,7 @@ A class project for CS508 from UIUC to implement the classic BLAST algorithm usi
 
 
 # Original BLASTN algorithm for mapping sequences to a database (of sequences)
-* The download link to the most recent BLAST packages: <https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/>
+* The download link to the most recent BLAST (v2.13.0) packages: <https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/>
 
 1. For each input unmapped sequence, represent it with consecutive words of length `W`.
 2. The matched positions are referred to as _hits_.
@@ -15,3 +15,4 @@ A class project for CS508 from UIUC to implement the classic BLAST algorithm usi
 
 # Current reference for how to do the project
 * G-BLASTN by Kaiyong Zhao and Xiaowen Chu. [link to software](http://www.comp.hkbu.edu.hk/~chxw/software/G-BLASTN.html).
+  * at the time of publication, G-BLASTN compared to BLAST v2.2.28. In our analysis we will run the G-BLASTN and our implementation and compare to the latest BLAST version (v2.13.0).
