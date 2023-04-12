@@ -12,3 +12,6 @@ A class project for CS508 from UIUC to implement the classic BLAST algorithm usi
 5. Gapped alignments that pass a certain threshold score are saved as "preliminary results".
 6. Preliminary matches are considered for ambiguities (e.g., ambiguous nucleotides) and indel locations.
 7. Results are then reported back to users.
+
+# Current reference for how to do the project
+* G-BLASTN by Kaiyong Zhao and Xiaowen Chu. [link to software](http://www.comp.hkbu.edu.hk/~chxw/software/G-BLASTN.html).
