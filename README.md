@@ -35,7 +35,7 @@ _**Members**: Chengze Shen, Kaining Zhou, Zhuxuan Liu, Zutai Chen_
 We will use the latest version of the Homo Sapien whole genome assembly available on NCBI.
   * The one used in G-BLASTN is an older version (__NCBI36, #accession GCF_000001405.12__).
   * The new one we will use is __GRCh38.p14, #accession GCF_000001405.40__.
-  * The new one is available from <https://www.ncbi.nlm.nih.gov/data-hub/genome/GCF_000001405.40/>.
+  * The new one is available from <https://www.ncbi.nlm.nih.gov/data-hub/genome/GCF_000001405.40/>. When downloading, select **RefSeq only** and just the genome sequences.
   * To create the database (blast database version 5) locally using `makeblastdb`, run the following command:
 ```
 makeblastdb -in [path/to/fasta] -parse_seqids -blastdb_version 5 -title "homo_sapien_grch38" -dbtype nucl
