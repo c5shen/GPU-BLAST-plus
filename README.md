@@ -50,6 +50,7 @@ gblastn -db <path/to/fasta> ... [other parameters]
 #### Query sequences
 We will use the same set of query sequences used in G-BLASTN to search against the target database mentioned above.
   * The queries are the first 500 bacterial sequences of the study SRX338063 from the NCBI server at <http://www.ncbi.nlm.nih.gov/sra/SRX338063>.
+  * The queries are made available in `data/queries.fasta`.
 
 #### Running BLASTN
 To run `blastn` with a given database and a given set of query sequences (without WindowMasker and DUST):
