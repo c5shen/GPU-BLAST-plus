@@ -1,6 +1,8 @@
 # GPU-BLAST-plus
 A class project for CS508 from UIUC to implement the classic BLAST algorithm using different GPU computing techniques. 
 
+_**Members**: Chengze Shen, Kaining Zhou, Zhuxuan Liu, Zutai Chen_
+
 
 # Original BLASTN algorithm for mapping sequences to a database (of sequences)
 * The download link to the most recent BLAST (v2.13.0) packages: <https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/>
@@ -26,4 +28,21 @@ A class project for CS508 from UIUC to implement the classic BLAST algorithm usi
     1. Having 2 sub-steps (kernels) greatly reduces control divergence.
     2. Using shared memory to record offsets in the "scan" sub-step. This is similar to what we did in the BFS lab (block-queuing kernel).
   * **FURTHER POSSIBLE IMPROVEMENTS**:
-    1. 
+    1. TBD
+
+# benchmark datasets
+#### Database
+We will use the latest version of the Homo Sapien whole genome assembly available on NCBI.
+  * The one used in G-BLASTN is an older version (__NCBI36, #accession GCF_000001405.12__).
+  * The new one we will use is __GRCh38.p14, #accession GCF_000001405.40__.
+  * The new one is available from <https://www.ncbi.nlm.nih.gov/data-hub/genome/GCF_000001405.40/>.
+#### Query sequences
+We will use the same set of query sequences used in G-BLASTN to search against the target database mentioned above.
+  * The queries are the first 500 bacterial sequences of the study SRX338063 from the NCBI server at <http://www.ncbi.nlm.nih.gov/sra/SRX338063>.
+
+# Task division
+## 4.13.2023 - 4.20.2023
+1. Chengze Shen - improvement of G-BLASTN, mainly on warp-queuing for the seeding step.
+2. Kaining Zhou - 
+2. Zhuxuan Liu - 
+3. Zutai Chen - 
