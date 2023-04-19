@@ -68,6 +68,9 @@ Assume you already downloaded and decompressed the source codes of BLAST+ and yo
 3. Now, try running `make` or `make -j` (using all available cores for compiling) and hope everything works.
 4. If step 3 works without errors, you should have successfully compiled binaries in directory `ncbi-blast-2.2.28+-src/c++/your-configured-folder/bin`. Then, you can install g-blastn by using this path.
 
+**CURRENT ISSUES**
+Although BLAST+ can compile now (with the instructions above), compilation for GPU codes still have issues that have not been resolved, which Chengze Shen is currently working on. 
+
 ##### Run BLASTN
 To run `blastn` with a given database and a given set of query sequences (without WindowMasker and DUST):
 ```
