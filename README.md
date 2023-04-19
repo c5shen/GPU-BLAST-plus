@@ -53,6 +53,20 @@ We will use the same set of query sequences used in G-BLASTN to search against t
   * The queries are made available in `data/queries.fasta`.
 
 #### Running BLASTN
+##### (<span style="color:red">*IMPORTANT*</span>) Compiling BLAST-2.2.28+ (for G-BLASTN to work):
+NCBI BLAST+ is a mess for newer compiler and linux system to compile. Although its binaries generally work, it is quite hard to compile the codes locally.
+To compile `ncbi-blast-2.2.28+-src` successfully, some files need to change (see files in **to_change.tar.gz**).
+
+After decompressing files from **to_change.tar.gz**, there will be two folders:
+*. `to_change/include/`
+*. `to_change/your-configured-folder/`
+
+Assume you already downloaded and decompressed the source codes of BLAST+ and you are in the directory `ncbi-blast-2.2.28+-src/c++`, do the following steps:
+1. Copy and overwrite files (remember to make backups) in `to_change/include` to the corresponding directories in `ncbi-lbast-2.2.28+-src/c++/include`.
+2. After running `./configure`, you should have generated a folder under `ncbi-blast-2.2.28+-src/c++`, for example, `ncbi-blast-2.2.28+-src/c++/GCC750-Debug64` depending on your system and compiler version.
+   * Copy `to_change/your-configured-folder/build/Makefile.lib` and overwite (make a backup) the corresponding `ncbi-blast-2.2.28+-src/c++/your-configured-folder/build/Makefile.lib`.
+
+##### Run BLASTN
 To run `blastn` with a given database and a given set of query sequences (without WindowMasker and DUST):
 ```
 blastn -db <database> -query <query> -task blastn -outfmt 7 -out <file> \
