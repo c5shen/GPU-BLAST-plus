@@ -68,8 +68,14 @@ Assume you already downloaded and decompressed the source codes of BLAST+ and yo
 3. Now, try running `make` or `make -j` (using all available cores for compiling) and hope everything works.
 4. If step 3 works without errors, you should have successfully compiled binaries in directory `ncbi-blast-2.2.28+-src/c++/your-configured-folder/bin`. Then, you can install g-blastn by using this path.
 
+##### (Cont.) Compiling G-BLASTN:
+1. To simplify the process, all files used to compile G-BLASTN on Chengze's environment is uploaded to <https://drive.google.com/file/d/1ecGFSnw80KM6_ofPhCZx-XhdFCR00oMu/view?usp=share_link>. The compiled file has BLASTN compiled already, so a new user should probably remove the entire `ncbi-blast-2.2.28+-src/` folder and follow the steps above to rebuild BLASTN.
+2. After getting the correctly compiled BLASTN, the user can try to compile G-BLASTN using either `./install` or `./install.noask`, for which the user needs to change the `LINE 50: installed_dir=` to the BLASTN `bin/` folder.
+2.2 Additionally, the user needs to change one additional file at `c++/src/algo/blast/gpu_blast/makefile`. G-BLASTN requires the header files from `~/NVIDIA_CUDA-{version}_Samples/common/inc` to work, so please change `LINE 18: COMMON_DIR :=` to the correct path.
+3. If everything is done correctly, you should be able to compile G-BLASTN, but might face issues running it on test dataset (I am struggling too).
+
 **CURRENT ISSUES**
-Although BLAST+ can compile now (with the instructions above), compilation for GPU codes still have issues that have not been resolved, which Chengze Shen is currently working on. 
+Although BLAST+ can compile now (with the instructions above), compilation for GPU codes still have issues that have not been resolved, which Chengze Shen is currently working on.
 
 ##### Run BLASTN
 To run `blastn` with a given database and a given set of query sequences (without WindowMasker and DUST):
