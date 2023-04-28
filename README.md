@@ -63,6 +63,7 @@ After decompressing files from **to_change.tar.gz**, there will be two folders:
 
 Assume you already downloaded and decompressed the source codes of BLAST+ and you are in the directory `ncbi-blast-2.2.28+-src/c++`, and you have run `./configure` already, do the following steps:
 1. Copy and overwrite files (remember to make backups) in `to_change/include` to the corresponding directories in `ncbi-lbast-2.2.28+-src/c++/include`.
+2. Change line 4749 of "c++/src/build-system/configure" script, add "7" or "7.*" to support GC 7.0.0 or 7+.
 2. After running `./configure`, you should have generated a folder under `ncbi-blast-2.2.28+-src/c++`, for example, `ncbi-blast-2.2.28+-src/c++/GCC750-Debug64` depending on your system and compiler version.
    * Copy `to_change/your-configured-folder/build/Makefile.lib` and overwite (make a backup) the corresponding `ncbi-blast-2.2.28+-src/c++/your-configured-folder/build/Makefile.lib`.
 3. Now, try running `make` or `make -j` (using all available cores for compiling) and hope everything works.
