@@ -34,7 +34,12 @@ _**Members**: Chengze Shen, Kaining Zhou, Zhuxuan Liu, Zutai Chen_
 #### Database
 We will use the latest version of the Homo Sapien whole genome assembly available on NCBI.
   * The one used in G-BLASTN is an older version (__NCBI36, #accession GCF_000001405.12__).
-  * The new one we will use is __GRCh38.p14, #accession GCF_000001405.40__.
+  * The new one we will use is an aggregated database including five genomes (human, mouse, cat, dog, and gorilla):
+      - Human: __#accession GCF_000001405.40__.
+      - Mouse: __#accession GCF_000001635.27__.
+      - Cat: __#accession GCF_018350175.1__.
+      - Dog: __#accession GCF_000002285.5__.
+      - Gorilla: __#accession GCF_029281585.1__.
   * The new one is available from <https://www.ncbi.nlm.nih.gov/data-hub/genome/GCF_000001405.40/>. When downloading, select **RefSeq only** and just the genome sequences.
   * To create the database (blast database version 4) locally using `makeblastdb`, run the following command:
 ```
