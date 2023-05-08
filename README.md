@@ -40,7 +40,7 @@ We will use the latest version of the Homo Sapien whole genome assembly availabl
       - Cat: __#accession GCF_018350175.1__.
       - Dog: __#accession GCF_000002285.5__.
       - Gorilla: __#accession GCF_029281585.1__.
-  * The new one is available from <https://www.ncbi.nlm.nih.gov/data-hub/genome/GCF_000001405.40/>. When downloading, select **RefSeq only** and just the genome sequences.
+  * The combined database can be found at [here](https://drive.google.com/file/d/1as5-0ARcdEcUWDxSnolhyWm6a4CoMlTZ/view?usp=sharing).
   * To create the database (blast database version 4) locally using `makeblastdb`, run the following command:
 ```
 makeblastdb -in [path/to/fasta] -parse_seqids -blastdb_version 4 -title "homo_sapien_grch38" -dbtype nucl
